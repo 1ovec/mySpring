@@ -14,40 +14,6 @@ import java.util.concurrent.CompletableFuture;
 
 public class MyTest {
 
-    private static SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-    /*public static void main(String[] args) {
-        boolean success = Boolean.parseBoolean(("z"));
-        System.out.println(success);
-    }*/
-
-    public static void test1(List<Object> dataList){
-        int pointsDataLimit = 9;
-        List<Object> newList = new ArrayList<Object>();
-        for(int i=1;i<dataList.size();i++){//分批次处理
-            newList.add(dataList.get(i));
-
-            if(pointsDataLimit == newList.size()||i == dataList.size()-1){
-
-                printList(newList);
-                newList.clear();
-                System.out.println("");
-                System.out.println("=====");
-
-            }
-        }
-    }
-
-   /* public static boolean zsx(float a){
-        return (a!=a);
-    }*/
-
-    public static void printList(List<Object> dataList){
-        for(Object str : dataList){
-            System.out.print(str + " -- ");
-        }
-    }
-
     /**
      * jdk11版本下的网络连接通信
      * @param args 参数
@@ -72,6 +38,9 @@ public class MyTest {
         System.out.println(respnseBody);
 
 
+        /**
+         * GET 请求
+         */
        /* HttpRequest request = HttpRequest.newBuilder().uri(URI.create("http://127.0.0.1:8011/integralCtr/changeIntegral")).GET().build();
         HttpResponse.BodyHandler<String> bodyHandler = HttpResponse.BodyHandlers.ofString();
         HttpClient client = HttpClient.newHttpClient();
