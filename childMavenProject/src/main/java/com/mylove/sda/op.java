@@ -7,4 +7,8 @@ public class op {
         int a = 1/0;
         return "say";
     }
+
+    public static void main(String[] args) {
+        String Sj = "55445555744899885814125546251551";
+    }
 }
